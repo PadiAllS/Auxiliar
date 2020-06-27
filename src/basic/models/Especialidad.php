@@ -4,7 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
-
+use yii\behaviors\BlameableBehavior;
 /**
  * This is the model class for table "especialidad".
  *
@@ -32,10 +32,11 @@ class Especialidad extends \yii\db\ActiveRecord
     {
         //$behaviors=parent::behaviors();
         return [
+            BlameableBehavior::className(),
             TimestampBehavior::className(),
         ];
 
-        
+
     }
 
     /**

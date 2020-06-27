@@ -26,6 +26,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\Usuario',
             'enableAutoLogin' => true,
+//            'enableSession' => false,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -52,12 +53,12 @@ $config = [
             // 'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 
+                ['class' => 'yii\rest\UrlRule',
                 'controller' => ['apiv1/usuario', 'apiv1/especialidad', 'apiv1/medico'],
             ],
             ],
         ]
-    
+
         // 'urlManager' => [
         //     'enablePrettyUrl' => true,
         //     'showScriptName' => false,
@@ -67,7 +68,7 @@ $config = [
         //         'controller' => ['apiv1/usuario', 'apiv1/especialidad', 'apiv1/medico'],
         //     ],
             // ],
-       
+
         ],
     'modules' => [
         'apiv1' => [
